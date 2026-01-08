@@ -63,7 +63,7 @@ export const queryGenerator = async (pitchData, location = "India") => {
         const prompt = generateSearchQueriesPrompt(pitchData, location);
 
         const model = genAI.getGenerativeModel({
-            model: "gemini-3-pro-preview",
+            model: "gemini-2.5-flash",
             systemInstruction: TAVILY_SEARCH_SYSTEM_PROMPT,
             generationConfig: {
                 maxOutputTokens: 2048,

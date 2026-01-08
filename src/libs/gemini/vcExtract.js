@@ -68,7 +68,7 @@ const deepCrawl = async (url) => {
 
 const geminiExtract = async (crawledText, brandData) => {
     const model = genAI.getGenerativeModel({
-        model: "gemini-3-pro-preview",
+        model: "gemini-2.5-flash",
         systemInstruction: VC_NORMALIZE_SYSTEM_PROMPT,
         generationConfig: {
             maxOutputTokens: 45000,
@@ -83,7 +83,7 @@ const geminiExtract = async (crawledText, brandData) => {
 };
 const generateQueries = async (vcProfile) => {
     const model = genAI.getGenerativeModel({
-        model: "gemini-3-pro-preview",
+        model: "gemini-2.5-flash",
         systemInstruction: VC_QUERY_GENERATOR_SYSTEM_PROMPT,
         generationConfig: {
             maxOutputTokens: 5000,
@@ -125,7 +125,7 @@ const runResearchQueries = async (queries) => {
 
 const geminiMergeProfiles = async (baseProfile, enrichment) => {
     const model = genAI.getGenerativeModel({
-        model: "gemini-3-pro-preview",
+        model: "gemini-2.5-flash",
         systemInstruction: VC_MERGE_SYSTEM_PROMPT,
         generationConfig: {
             maxOutputTokens: 45000,

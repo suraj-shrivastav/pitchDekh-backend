@@ -41,7 +41,7 @@ const MATCH_ANALYSIS_SYSTEM_PROMPT = `
 export const analyzeMatch = async (pitch, matchItem) => {
     try {
         const model = genAI.getGenerativeModel({
-            model: "gemini-3-pro-preview",
+            model: "gemini-2.5-flash",
             systemInstruction: MATCH_ANALYSIS_SYSTEM_PROMPT,
             generationConfig: { responseMimeType: "application/json" },
         });

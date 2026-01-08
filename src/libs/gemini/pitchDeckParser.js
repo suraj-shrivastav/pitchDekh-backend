@@ -98,7 +98,7 @@ export const parsePitchDeck = async (fileUrl, mimeType, userId) => {
     file = await uploadAndPoll(localFilePath, mimeType);
 
     const model = genAI.getGenerativeModel({
-      model: "gemini-3-pro-preview",
+      model: "gemini-2.5-flash",
       systemInstruction: SYSTEM_PROMPT,
       generationConfig: {
         maxOutputTokens: 10000,
@@ -189,7 +189,7 @@ IMPORTANT:
 
 const normalizePitch = async (pitchData, userId, fileUrl) => {
   const model = genAI.getGenerativeModel({
-    model: "gemini-3-pro-preview",
+    model: "gemini-2.5-flash",
     systemInstruction: NORMALIZE_SYSTEM_PROMPT,
     generationConfig: {
       maxOutputTokens: 15000,
