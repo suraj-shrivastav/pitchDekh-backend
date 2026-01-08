@@ -16,7 +16,7 @@ export const extractVCData = async (req, res) => {
 }
 
 export const getVCs = async (req, res) => {
-    console.log("getVCs Hit")
+    // console.log("getVCs Hit")
     try {
         const vcs = await supabase
             .from("vc_profiles")
